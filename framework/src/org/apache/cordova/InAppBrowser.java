@@ -427,7 +427,8 @@ public class InAppBrowser extends CordovaPlugin {
                  * Can't replace it with the API 8 level call right now as our minimum SDK is 7 until May 2013
                  */
                 // @TODO: replace with settings.setPluginState(android.webkit.WebSettings.PluginState.ON)
-                settings.setPluginsEnabled(true);
+                // settings.setPluginsEnabled(true);
+                settings.setPluginState(WebSettings.PluginState.ON);
                 settings.setDatabaseEnabled(true);
                 String databasePath = cordova.getActivity().getApplicationContext().getDir("inAppBrowserDB", Context.MODE_PRIVATE).getPath();
                 settings.setDatabasePath(databasePath);
